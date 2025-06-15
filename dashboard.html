@@ -1,0 +1,70 @@
+﻿<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+  <meta charset="UTF-8">
+
+  <title>Admin Dashboard | 44kdot</title>
+
+  <link rel="stylesheet" href="css/styles.css">
+
+</head>
+
+<body>
+
+  <header>
+
+    <h1>🎛 Admin Dashboard</h1>
+
+    <nav>
+<a href="index.html">← Back to site</a>
+</nav>
+
+  </header>
+
+  <main>
+
+    <section id="upload-section">
+
+      <h2>Upload a New Track</h2>
+
+      <form id="upload-form">
+
+        <input type="text" id="title" placeholder="Track Title" required>
+
+        <input type="text" id="artist" placeholder="Artist Name" required>
+
+        <input type="text" id="genre" placeholder="Genre" required>
+
+        <label><input type="checkbox" id="preRelease"> Pre-release?</label>
+
+        <input type="file" id="audioFile" accept="audio/*" required>
+
+        <button type="submit">Upload</button>
+
+      </form>
+
+    </section>
+
+    <section id="pending-approval">
+
+      <h2>Tracks Pending Approval</h2>
+
+      <div id="pending-list">
+</div>
+
+    </section>
+
+  </main>
+
+  <script src="firebase.js">
+</script>
+
+  <script src="js/main.js">
+</script>
+
+</body>
+
+</html>

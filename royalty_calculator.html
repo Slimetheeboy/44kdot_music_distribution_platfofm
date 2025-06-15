@@ -1,0 +1,47 @@
+﻿<!DOCTYPE html>
+
+<html>
+
+<head>
+
+  <title>Royalty Calculator | 44kdot Records</title>
+
+  <link rel="stylesheet" href="css/styles.css">
+
+</head>
+
+<body>
+
+  <h1>💰 Royalty Calculator</h1>
+
+  <form>
+
+    <input type="number" placeholder="Total Streams" required>
+
+    <input type="number" placeholder="Revenue per Stream (e.g., 0.004)" step="0.001" required>
+
+    <button type="button" onclick="calculateRoyalty()">Calculate</button>
+
+    <p id="result">
+</p>
+
+  </form>
+
+  <script>
+
+    function calculateRoyalty() 
+{
+      let streams = parseFloat(document.querySelectorAll('input')[0].value);
+
+      let rate = parseFloat(document.querySelectorAll('input')[1].value);
+
+      let total = streams * rate;
+
+      document.getElementById('result').innerText = 'Estimated Royalty: M' + total.toFixed(2);
+
+    }
+  </script>
+
+</body>
+
+</html>
